@@ -3,6 +3,7 @@ import static spark.Spark.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 
 public class Main {
@@ -31,7 +32,7 @@ public class Main {
                 return "Title: " + book.getTitle() + ", Author: " + book.getAuthor();
             } else {
                 response.status(404); // 404 Not found
-                return "Book not found";
+                JOptionPane.showMessageDialog(null, "Book not found");
             }
         });
 
@@ -50,7 +51,7 @@ public class Main {
                 return "Book with id '" + id + "' updated";
             } else {
                 response.status(404); // 404 Not found
-                return "Book not found";
+                JOptionPane.showMessageDialog(null, "Book not found");
             }
         });
 
@@ -61,10 +62,10 @@ public class Main {
                 return "Book with id '" + id + "' deleted";
             } else {
                 response.status(404); // 404 Not found
-                return "Book not found";
+                JOptionPane.showMessageDialog(null, "Book not found");
             }
         });
-        
+
         get("/books", (request, response) -> {
             String ids = "";
             for (String id : books.keySet()) {
