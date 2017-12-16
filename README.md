@@ -1,5 +1,7 @@
 # javaAPI
-* java API using a fetch method of (JSONObject json = new JSONObject(IOUtils.toString(new URL("https://graph.facebook.com/me"), Charset.forName("UTF-8")));)
+
+## java API using a fetch method of 
+     (JSONObject json = new JSONObject(IOUtils.toString(new URL("https://graph.facebook.com/me"), Charset.forName("UTF-     8")));)
 
 **CRUD compatible 
 1. create = /post
